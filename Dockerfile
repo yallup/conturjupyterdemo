@@ -15,7 +15,6 @@ USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
-RUN ls
-RUN . get_sources.sh; cd Exercises
+RUN chmod +x get_sources.sh; ./get_sources.sh; cd Exercises
 
 ENTRYPOINT []

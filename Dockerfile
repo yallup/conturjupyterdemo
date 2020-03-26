@@ -7,11 +7,13 @@ ENV NB_UID ${NB_UID}
 ENV HOME /home/${NB_USER}
 
 RUN adduser --uid ${NB_UID} ${NB_USER}
+WORKDIR ${HOME}
 
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
+
 
 ENTRYPOINT []

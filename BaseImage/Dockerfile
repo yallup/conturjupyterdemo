@@ -16,7 +16,7 @@ ENV CONTURMODULEDIR=/contur
 
 #ENV DISPLAY :0
 
-#WORKDIR /contur
+WORKDIR /contur
 
 # Add Tini. Tini operates as a process subreaper for jupyter. This prevents kernel crashes.
 ENV TINI_VERSION v0.6.0

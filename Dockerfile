@@ -16,5 +16,5 @@ RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
 RUN chmod +x get_sources.sh; ./get_sources.sh; cd Exercises
-
+WORKDIR ${HOME}/Exercises
 ENTRYPOINT []

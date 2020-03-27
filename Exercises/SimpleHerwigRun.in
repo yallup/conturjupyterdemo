@@ -23,16 +23,5 @@ set EventGenerator:EventHandler:LuminosityFunction:Energy 13000.0
 cd /Herwig/MatrixElements/
 insert SubProcess:MatrixElements[0] MEqq2gZ2ff
 
-
 cd /Herwig/Generators
-
-
-##################################################
-## prepare for Rivet analysis or HepMC output
-## when running with parton shower
-##################################################
-read snippets/Rivet.in
-insert /Herwig/Analysis/Rivet:Analyses 0 ATLAS_2017_I1514251
-
-
 saverun LHC EventGenerator

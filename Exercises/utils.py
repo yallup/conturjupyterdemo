@@ -1,6 +1,7 @@
 import subprocess
+import shlex
 def run_command(command):
-    process = subprocess.Popen(command, stdout=subprocess.PIPE)
+    process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE)
     while True:
         output = process.stdout.readline()
         if output == '' and process.poll() is not None:
